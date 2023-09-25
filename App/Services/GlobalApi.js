@@ -9,7 +9,9 @@ const api = create({
   })
 const apiKey='?country=us&apiKey=38991ae9639c48cb8c4319670b122c76'
 const getTopHeadline=api.get('/top-headlines'+apiKey)
+const getByCategory=(category)=>api.get('/everything?q='+category+"&apiKey=38991ae9639c48cb8c4319670b122c76")
 
 export default{
-    getTopHeadline
+  getByCategory,
+  getTopHeadline
 }
